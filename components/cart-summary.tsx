@@ -16,13 +16,13 @@ export function CartSummary() {
   } = useShoppingCart();
   const [isLoading, setLoading] = useState(false);
   const isDisabled = isLoading || cartCount === 0;
-  const shippingAmount = cartCount > 0 ? 500 : 0;
+  const shippingAmount = cartCount > 0 ? 10000 : 0;
   const totalAmount = totalPrice + shippingAmount;
 
   async function onCheckout() {
     setLoading(true)
     const response = await fetch('/api/checkout', {
-      method: "post",
+      method: "POST",
       body: JSON.stringify(cartDetails)
     })
     const data = await response.json()
@@ -52,7 +52,7 @@ export function CartSummary() {
             <span>Shipping estimate</span>
           </dt>
           <dd className="text-sm font-medium">
-          {formatCurrencyString({ value: totalAmount, currency: "NGN" })}
+          {formatCurrencyString({ value: totalAmount, currency: "USD" })}
           </dd>
         </div>
         <div className="flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-600">

@@ -3,7 +3,11 @@ import Link from "next/link"
 import { stripe } from "@/lib/stripe"
 import { CheckoutSession } from "@/components/checkout-session"
 
-interface Props {}
+interface Props {
+searchParams:  {
+ session_id?: string
+ }
+}
 
 export default async function Page({ searchParams} : Props) {
   const sessionId =searchParams?.session_id ?? ""

@@ -19,11 +19,11 @@ shipping_address_collection: {
 },
 shipping_options: [
 {
- shipping_rate: "shr_1NsqYyANo89BhENXyfdU7XUo"
+ shipping_rate: "shr_1Nv0R9ANo89BhENXNBRtqIEj"
 }
 ],
 billing_address_collection: "auto",
-success_url:`${origin}/sucess?session_id ={CHECKOUT_SESSION_ID}`,
+success_url:`${origin}/success?session_id ={CHECKOUT_SESSION_ID}`,
 cancel_url:`${origin}/cart`
    })
 return NextResponse.json(session)
