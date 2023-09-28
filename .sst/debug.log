@@ -1,0 +1,7 @@
+2023-09-28T13:50:50.960Z   +130ms [debug] Config loaded {"version":"2.26.7","cdkVersion":"2.95.1","constructsVersion":"10.2.69","config":{"name":"letshopeasy","region":"us-east-1","stage":"letshopeasy","ssmPrefix":"/sst/letshopeasy/letshopeasy/"},"metafile":{"inputs":{"sst.config.ts":{"bytes":215,"imports":[{"path":"sst","kind":"import-statement","external":true},{"path":"sst/constructs","kind":"import-statement","external":true}],"format":"esm"}},"outputs":{".sst.config.1695909050843.mjs":{"imports":[],"exports":["default"],"entryPoint":"sst.config.ts","inputs":{"sst.config.ts":{"bytesInOutput":126}},"bytes":308}}},"paths":{"config":"C:\\Users\\Qshelter_Isioma\\Desktop\\letshopeasy\\sst.config.ts","root":"C:\\Users\\Qshelter_Isioma\\Desktop\\letshopeasy","out":"C:\\Users\\Qshelter_Isioma\\Desktop\\letshopeasy\\.sst","artifacts":"C:\\Users\\Qshelter_Isioma\\Desktop\\letshopeasy\\.sst\\artifacts"}}
+2023-09-28T13:50:54.108Z  +3148ms [debug] Using AWS profile 
+2023-09-28T13:50:54.157Z    +49ms [debug] Created AWS client IoTClient
+2023-09-28T13:50:54.157Z     +0ms [debug] Getting IoT endpoint
+2023-09-28T13:50:54.196Z    +39ms [debug] Synthesizing stacks...
+2023-09-28T13:50:54.202Z     +6ms [debug] Created AWS client STSClient
+2023-09-28T13:50:56.196Z  +1994ms [debug] {"tryNextLink":false,"name":"CredentialsProviderError","$metadata":{"attempts":1,"totalRetryDelay":0}}
