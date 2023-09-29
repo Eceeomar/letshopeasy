@@ -1,0 +1,49 @@
+[debug] [2023-09-28T15:27:19.033Z] ----------------------------------------------------------------------
+[debug] [2023-09-28T15:27:19.041Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Qshelter_Isioma\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-09-28T15:27:19.041Z] CLI Version:   12.6.1
+[debug] [2023-09-28T15:27:19.041Z] Platform:      win32
+[debug] [2023-09-28T15:27:19.041Z] Node Version:  v20.2.0
+[debug] [2023-09-28T15:27:19.041Z] Time:          Thu Sep 28 2023 16:27:19 GMT+0100 (West Africa Standard Time)
+[debug] [2023-09-28T15:27:19.041Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-28T15:27:19.151Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-28T15:27:19.151Z] > authorizing via signed-in user (isiomaenuonye@gmail.com)
+[debug] [2023-09-28T15:27:19.152Z] [iam] checking project letshopeasy-fad3b for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-28T15:27:19.154Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/letshopeasy-fad3b:testIamPermissions [none]
+[debug] [2023-09-28T15:27:19.154Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/letshopeasy-fad3b:testIamPermissions x-goog-quota-user=projects/letshopeasy-fad3b
+[debug] [2023-09-28T15:27:19.154Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/letshopeasy-fad3b:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-28T15:27:19.902Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/letshopeasy-fad3b:testIamPermissions 200
+[debug] [2023-09-28T15:27:19.902Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/letshopeasy-fad3b:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-28T15:27:19.903Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/letshopeasy-fad3b [none]
+[debug] [2023-09-28T15:27:20.518Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/letshopeasy-fad3b 200
+[debug] [2023-09-28T15:27:20.518Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/letshopeasy-fad3b {"projectId":"letshopeasy-fad3b","projectNumber":"989116770556","displayName":"letshopeasy","name":"projects/letshopeasy-fad3b","resources":{"hostingSite":"letshopeasy-fad3b"},"state":"ACTIVE","etag":"1_70f7128c-492f-44ef-b7af-140aec6f0712"}
+[debug] [2023-09-28T15:27:26.704Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/letshopeasy-fad3b/sites pageToken=&pageSize=10
+[debug] [2023-09-28T15:27:27.914Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/letshopeasy-fad3b/sites 200
+[debug] [2023-09-28T15:27:27.915Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/letshopeasy-fad3b/sites {"sites":[{"name":"projects/letshopeasy-fad3b/sites/letshopeasy-fad3b","defaultUrl":"https://letshopeasy-fad3b.web.app","appId":"1:989116770556:web:67e211d351599c3d300f79","type":"DEFAULT_SITE"}]}
+[debug] [2023-09-28T15:27:27.916Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:989116770556:web:67e211d351599c3d300f79/config [none]
+[debug] [2023-09-28T15:27:28.731Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:989116770556:web:67e211d351599c3d300f79/config 200
+[debug] [2023-09-28T15:27:28.732Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:989116770556:web:67e211d351599c3d300f79/config {"projectId":"letshopeasy-fad3b","appId":"1:989116770556:web:67e211d351599c3d300f79","storageBucket":"letshopeasy-fad3b.appspot.com","apiKey":"AIzaSyD4CQH1lpR47HVqAEzIuW841XRXvzrUqfk","authDomain":"letshopeasy-fad3b.firebaseapp.com","messagingSenderId":"989116770556"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Loaded env from C:\Users\Qshelter_Isioma\Desktop\letshopeasy\.env
+
+[info] - info Creating an optimized production build...
+
+[info] uncaughtException [Error: EPERM: operation not permitted, open 'C:\Users\Qshelter_Isioma\Desktop\letshopeasy\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\Qshelter_Isioma\\Desktop\\letshopeasy\\.next\\trace'
+}
+
+[debug] [2023-09-28T15:27:41.915Z] Error: ENOENT: no such file or directory, open 'C:\Users\Qshelter_Isioma\Desktop\letshopeasy\.next\server\middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.

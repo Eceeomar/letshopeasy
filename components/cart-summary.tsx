@@ -20,23 +20,42 @@ export function CartSummary() {
   const totalAmount = totalPrice + shippingAmount;
 
   async function onCheckout() {
-    setLoading(true)
-    const response = await fetch('/api/checkout', {
-      method: "POST",
-      body: JSON.stringify(cartDetails)
-    })
-    const data = await response.json()
-    const result =await redirectToCheckout(data.Id)
-    if (result?.error) {
-      console.error(result)
+    setLoading(true);
+    try {
+      const response = await fetch('/api/checkout', {
+        method: "POST",
+        body: JSON.stringify(cartDetails)
+      });
+
+      if (!response.ok) {
+        // Handle the case where the response is not successful
+        console.error(`Checkout failed with status ${response.status}`);
+        return;
+      }
+
+      const data = await response.json();
+
+      // Check if the data contains the expected property (in this case, 'Id')
+      if (data.Id) {
+        const result = await redirectToCheckout(data.Id);
+
+        if (result?.error) {
+          console.error(result);
+        }
+      } else {
+        console.error("Invalid data structure in the response");
+      }
+    } catch (error) {
+      console.error("Error during checkout:", error);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false)
   }
 
   return (
     <section
       aria-labelledby="summary-heading"
-      className="mt-16 rounded-lg border-2 border-gray-200 bg-gray-50 px-4 py-6 shadow-md dark:border-gray-900 dark:bg-black sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
+      className="mt-16 rounded-lg border-2 border-gray-200 bg-gray-50 px-4 py-6 shadow-md dark:border-gray-900 dark-bg-black sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8"
     >
       <h2 id="summary-heading" className="text-lg font-medium">
         Order summary
@@ -52,7 +71,7 @@ export function CartSummary() {
             <span>Shipping estimate</span>
           </dt>
           <dd className="text-sm font-medium">
-          {formatCurrencyString({ value: totalAmount, currency: "USD" })}
+            {formatCurrencyString({ value: totalAmount, currency: "USD" })}
           </dd>
         </div>
         <div className="flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-600">
